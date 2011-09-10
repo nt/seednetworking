@@ -15,6 +15,6 @@
   <%= @event.date %>
 </p>
 
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<p>
+  <%= link_to "Nouveau projet", new_event_project_path(@event) %>
+</p>

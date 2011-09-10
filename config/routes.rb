@@ -1,5 +1,8 @@
 Seednetworking::Application.routes.draw do
-  resources :events
+  
+  resources :events do
+    resources :projects
+  end
 
   devise_for :users
 
