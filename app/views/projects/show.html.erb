@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to "Retour à la liste des projets", event_path(@event) %>
+
 <p>
   <b>Name:</b>
   <%= @project.name %>
@@ -7,7 +9,7 @@
 
 <p>
   <b>Description:</b>
-  <%= @project.description %>
+  <%= @project.description.gsub(/\n/,"<br/>").html_safe %>
 </p>
 
 <p>
@@ -20,3 +22,8 @@
   <%= @project.website %>
 </p>
 
+<p>
+  <b>Porteur</b>
+  <%= @project.user.first_name %> <%= @project.user.last_name %>
+</p>
+  

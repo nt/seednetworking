@@ -1,0 +1,29 @@
+html, body {
+	background: #F1F1F1;
+}
+
+#header {
+	width: 100%;
+	background-color: #000;
+}
+
+#main {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+
+#event_description {
+	font-size: 14pt;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.signup_im {
+	padding: 0px;
+	margin: 0px;
+	width: 470px;
+}
+
+td {
+	vertical-align: top;
+}

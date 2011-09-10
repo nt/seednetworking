@@ -11,23 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :seeking %><br />
-    <%= f.text_field :seeking %>
-  </div>
-  <div class="field">
-    <%= f.label :website %><br />
-    <%= f.text_field :website %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<table>
+  <tr>
+    <td width="100px" vertical-align="top"><%= f.label :name, "Nom du projet" %></td>
+    <td><%= f.text_field :name %></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><%= f.label :description %></td>
+    <td><%= f.text_area :description, size: "30x15" , style:"width:400px"%></td>
+    <td>
+      <p>
+        Décrivez votre projet de manière synthétique, en détaillant clairement:<br/> votre idée, les profils clés de l'équipe, l'état d'avancement du projet, ce que vous attendez du profil que vous recherchez, et ce que vous êtes prêt à lui proposer.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="100px" vertical-align="top"><%= f.label :website, "Site" %></td>
+    <td><%= f.text_field :website %></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td width="100px" vertical-align="top"><%= f.label :seeking, "Je cherche" %></td>
+    <td><%= f.text_field :seeking %></td>
+    <td>.. un associé ou un stagiaire ?</td>
+  </tr>
+  <tr><td></td>
+    <td><%= f.submit %></td><td></td>
+  </tr>
+</table>
+
 <% end %>
