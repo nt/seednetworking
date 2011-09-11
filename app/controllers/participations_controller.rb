@@ -2,34 +2,12 @@ class ParticipationsController < ApplicationController
   
   before_filter :load_event
   before_filter :authenticate_user!
-  
-  # GET /participations
-  # GET /participations.xml
-  def index
-    @participations = Participation.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @participations }
-    end
-  end
-
-  # GET /participations/1
-  # GET /participations/1.xml
-  def show
-    @participation = Participation.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @participation }
-    end
-  end
 
   # GET /participations/new
   # GET /participations/new.xml
   def new
+    authorize! :signup_self, @event
     @participation = Participation.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @participation }
@@ -39,11 +17,13 @@ class ParticipationsController < ApplicationController
   # GET /participations/1/edit
   def edit
     @participation = Participation.find(params[:id])
+    authorize! :update, @participation
   end
 
   # POST /participations
   # POST /participations.xml
   def create
+    authorize! :signup_self, @event
     @participation = Participation.new(params[:participation])
     @participation.event = @event
     @participation.user = current_user
@@ -62,7 +42,7 @@ class ParticipationsController < ApplicationController
   # PUT /participations/1.xml
   def update
     @participation = Participation.find(params[:id])
-
+    authorize! :update, @participation
     respond_to do |format|
       if @participation.update_attributes(params[:participation])
         format.html { redirect_to(@participation, :notice => 'Participation was successfully updated.') }
@@ -74,15 +54,4 @@ class ParticipationsController < ApplicationController
     end
   end
 
-  # DELETE /participations/1
-  # DELETE /participations/1.xml
-  def destroy
-    @participation = Participation.find(params[:id])
-    @participation.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(participations_url) }
-      format.xml  { head :ok }
-    end
-  end
 end
