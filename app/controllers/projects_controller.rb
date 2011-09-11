@@ -1,17 +1,6 @@
 class ProjectsController < ApplicationController
   
   before_filter :load_event
-  
-  # GET /projects
-  # GET /projects.xml
-  def index
-    @projects = Project.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @projects }
-    end
-  end
 
   # GET /projects/1
   # GET /projects/1.xml
@@ -69,18 +58,6 @@ class ProjectsController < ApplicationController
         format.html { render :action => "edit" }
         format.xml  { render :xml => @project.errors, :status => :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /projects/1
-  # DELETE /projects/1.xml
-  def destroy
-    @project = Project.find(params[:id])
-    @project.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(projects_url) }
-      format.xml  { head :ok }
     end
   end
   

@@ -5,6 +5,8 @@ Seednetworking::Application.routes.draw do
   end
 
   devise_for :users
+  
+  root to: "events#latest"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,29 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to "Retour à la liste des projets", event_path(@event) %>
+<p><%= link_to "Retour à la liste des projets", event_path(@event) %></p>
 
+  <h2><%= @project.name %></h2>
+<p>Porté par <%= @project.user.first_name %> <%= @project.user.last_name %></p>
+<h3>Le projet</h3>
 <p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
-
-<p>
-  <b>Description:</b>
   <%= @project.description.gsub(/\n/,"<br/>").html_safe %>
 </p>
 
 <p>
-  <b>Seeking:</b>
+  <b>Recherche:</b>
   <%= @project.seeking %>
 </p>
 
 <p>
-  <b>Website:</b>
+  <b>Site web:</b>
   <%= @project.website %>
 </p>
 
-<p>
-  <b>Porteur</b>
-  <%= @project.user.first_name %> <%= @project.user.last_name %>
-</p>
   
