@@ -40,7 +40,7 @@ class ProjectsController < ApplicationController
     @project.user = current_user
     respond_to do |format|
       if @project.save
-        format.html { redirect_to([@event, @project], :notice => 'Votre projet a bien été enregistré') }
+        format.html { redirect_to([@event, @project], :notice => 'Votre projet a bien ete enregistre') }
         format.xml  { render :xml => @project, :status => :created, :location => @project }
       else
         format.html { render :action => "new" }
