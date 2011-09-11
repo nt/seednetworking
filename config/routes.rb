@@ -2,6 +2,7 @@ Seednetworking::Application.routes.draw do
   
   resources :events do
     resources :projects
+    resources :participations
   end
 
   devise_for :users

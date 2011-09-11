@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Seeking:</b>
+  <%= @participation.seeking %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @participation.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_participation_path(@participation) %> |
+<%= link_to 'Back', participations_path %>

@@ -1,0 +1,34 @@
+<%= form_for([@event, @participation]) do |f| %>
+  <% if @participation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@participation.errors.count, "error") %> prohibited this participation from being saved:</h2>
+
+      <ul>
+      <% @participation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <tr>
+      <td><%= f.label :description %></td>
+      <td><%= f.text_area :description, size: "30x15" , style:"width:400px"%></td>
+      <td>
+        <p>
+          Décrivez votre profil de manière synthétique, en détaillant clairement : votre expérience, vos compétences, ce que vous faites actuellement, le projet que vous recherchez et le rôle que vous voulez y prendre.<br/>
+          N'oubliez pas de préciser vos atouts pour faire avancer le projet.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td width="100px" vertical-align="top"><%= f.label :seeking, "Je cherche" %></td>
+      <td><%= f.text_field :seeking %></td>
+      <td>.. une association, un job, autre ?</td>
+    </tr>
+    <tr><td></td>
+      <td><%= f.submit %></td><td></td>
+    </tr>
+  </table>
+<% end %>

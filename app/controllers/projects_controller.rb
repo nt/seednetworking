@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
-  
+
   before_filter :load_event
+  before_filter :authenticate_user!, except: [:show]
 
   # GET /projects/1
   # GET /projects/1.xml
@@ -60,8 +61,5 @@ class ProjectsController < ApplicationController
       end
     end
   end
-  
-  def load_event
-    @event = Event.find(params[:event_id])
-  end
+
 end
