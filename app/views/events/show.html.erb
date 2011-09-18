@@ -10,7 +10,9 @@
 
 <p>
 <% if can? :signup_project, @event %>
-<a href="<%= url_for new_event_project_path(@event) %>"><img src="/images/projets.png" class="signup_im"/></a><% end %><% if can? :signup_self, @event %><a href="<%= url_for new_event_participation_path(@event) %>"><img src="/images/competences.png" class="signup_im"/></a>
+<a href="<%= url_for new_event_project_path(@event) %>" style='backgound-image:src("/images/projets.png"); width:400px; height : 250px'>Porteurs de pojet, Inscrivez vous !</a>
+<% end %><% if can? :signup_self, @event %>
+<a href="<%= url_for new_event_participation_path(@event) %>" style='backgound-image:src("/images/competences.png");  width:400px; height : 250px'>Porteurs de competances, Inscrivez vous!</a>
 <%end%>
 </p>
 
