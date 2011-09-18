@@ -10,9 +10,9 @@
 
 <p>
 <% if can? :signup_project, @event %>
-<a href="<%= url_for new_event_project_path(@event) %>" style="backgound-image:src('http://seednetworking.heroku.com/images/projets.png'); width:400px; height : 250px">Porteurs de pojet, Inscrivez vous !</a>
+<a href="<%= url_for new_event_project_path(@event) %>" style="diplay : block;backgound-image:src('http://seednetworking.heroku.com/images/projets.png'); width:400px; height : 250px">Porteurs de pojet, Inscrivez vous !</a>
 <% end %><% if can? :signup_self, @event %>
-<a href="<%= url_for new_event_participation_path(@event) %>" style="backgound-image:src('http://seednetworking.heroku.com/images/competences.png');  width:400px; height : 250px">Porteurs de competances, Inscrivez vous!</a>
+<a href="<%= url_for new_event_participation_path(@event) %>" style="diplay : block;backgound-image:src('http://seednetworking.heroku.com/images/competences.png');  width:400px; height : 250px">Porteurs de competances, Inscrivez vous!</a>
 <%end%>
 </p>
 
