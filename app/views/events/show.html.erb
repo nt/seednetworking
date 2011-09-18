@@ -2,9 +2,9 @@
 
 
 <h1><%= @event.name %></h1>
-<h6>Le <%= @event.date %></h6>
+<h3>Le <%= @event.date %></h3>
 
-<p id="event_description">
+<p id="event_description" lass='twipsies well'>
   <%= @event.description.gsub(/\n/, "<br/>").html_safe %>
 </p>
 
