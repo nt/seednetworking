@@ -1,47 +1,7 @@
 <h2>Inscrivez vous !</h2>
 <h3>Il faut être inscrit pour participer au seednetworking</h3>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <table>
-    <tr>
-      <td width="100px"><%= f.label :first_name, "Prénom" %></td>
-      <td><%= f.text_field :first_name %></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><%= f.label :last_name, "Nom" %></td>
-      <td><%= f.text_field :last_name %></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><%= f.label :email %></td>
-      <td><%= f.email_field :email %></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><%= f.label :telephone %></td>
-      <td><%= f.text_field :telephone %></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><%= f.label :password %></td>
-      <td><%= f.password_field :password %></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><%= f.label :password_confirmation %></td>
-      <td><%= f.password_field :password_confirmation %></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><%= f.submit "Sign up" %></td>
-      <td></td>
-    </tr>
-  </table>
-<% end %>
+<%= render 'devise/registrations/form' %>
 
 <h2>Déja Inscrit ?</h2>
 

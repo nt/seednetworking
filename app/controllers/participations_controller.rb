@@ -25,6 +25,7 @@ class ParticipationsController < ApplicationController
   def create
     authorize! :signup_self, @event
     @participation = Participation.new(params[:participation])
+    @participation.seeking ||= params[:seeking_other]
     @participation.event = @event
     @participation.user = current_user
     respond_to do |format|

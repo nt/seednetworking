@@ -1,4 +1,12 @@
 class Project < ActiveRecord::Base
+  
+  SEEKING_OPTIONS = {
+    "partner" => "Un associe",
+    "fulltime_worker" => "Un employe plein temps",
+    "intern" => "Un stagiare",
+    "service_provider" => "Prestataire"
+  }
+  
   acts_as_votable
   
   belongs_to :event
@@ -9,5 +17,10 @@ class Project < ActiveRecord::Base
   validates_presence_of :user
   validates_presence_of :event
   validates_presence_of :seeking
+  
+  def seeking
+    s = read_attribute(:seeking)
+    SEEKING_OPTIONS.has_key?(s) ? SEEKING_OPTIONS[s] : s
+  end
   
 end

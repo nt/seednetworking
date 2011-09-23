@@ -23,8 +23,14 @@
       </td>
     </tr>
     <tr>
-      <td width="100px" vertical-align="top"><%= f.label :seeking, "Je cherche" %></td>
-      <td><%= f.text_field :seeking %></td>
+      <td width="100px" vertical-align="top">Je cherche</td>
+      <td>
+        <% Participation::SEEKING_OPTIONS.each do |k,v| %>
+          <%= f.label(("seeking_"+k).to_sym, v)%><%= f.radio_button(:seeking, k)%><br/>
+        <% end %>
+        <%= label_tag "seeking_other", "Autre" %>
+        <%= text_field_tag :seeking_other %>
+      </td>
       <td>.. une association, un job, autre ?</td>
     </tr>
     <tr><td></td>
