@@ -1,7 +1,9 @@
 Seednetworking::Application.routes.draw do
   
   resources :events do
-    resources :projects
+    resources :projects do
+      post 'interested'
+    end
     resources :participations
   end
 

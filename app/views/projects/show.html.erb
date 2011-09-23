@@ -5,6 +5,9 @@
   <h2><%= @project.name %></h2>
 <p>Porté par <%= @project.user.first_name %> <%= @project.user.last_name %></p>
 <h3>Le projet</h3>
+<% if @project.likes.any? %>
+<h4><%= @project.likes.size %> personnes se sont déclarées intéressées par ce projet</h4>
+<% end %>
 <p>
   <%= @project.description.gsub(/\n/,"<br/>").html_safe %>
 </p>
@@ -19,4 +22,7 @@
   <%= @project.website %>
 </p>
 
+<% if can? :vote, @project %>
+  <a href='<%= event_project_path(@event, @project)%>/interested' data-method="post" rel='nofollow'> Je suis intéressé par ce projet</a>
+<% end %>
   

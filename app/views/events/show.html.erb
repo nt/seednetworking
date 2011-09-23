@@ -21,6 +21,7 @@
   <hr/>
   <div>
     <h3><%= p.name %></h3>
+    <h6>Votes: <%= p.likes.size %></h6>
     <p>
       <%= p.description.gsub(/\n/,"<br/>").html_safe %>
     </p>

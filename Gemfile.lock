@@ -38,6 +38,8 @@ GEM
       activemodel (= 3.0.10)
       activesupport (= 3.0.10)
     activesupport (3.0.10)
+    acts_as_votable (0.1.0)
+      rails (>= 3.0.0)
     arel (2.0.10)
     bcrypt-ruby (3.0.0)
     builder (2.1.2)
@@ -95,6 +97,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_votable
   cancan
   ckeditor
   devise

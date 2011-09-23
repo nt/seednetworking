@@ -66,4 +66,16 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def interested
+    @project = Project.find(params[:project_id])
+    authorize! :vote, @project
+    
+    @project.liked_by current_user
+    
+    respond_to do |format|  
+       format.html { redirect_to([@event, @project], notice: 'Merci pour votre vote !') }  
+       format.js   { render :nothing => true }  
+    end
+  end
+
 end
