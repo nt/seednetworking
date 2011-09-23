@@ -25,4 +25,8 @@
 <% if can? :vote, @project %>
   <a href='<%= event_project_path(@event, @project)%>/interested' data-method="post" rel='nofollow'> Je suis intéressé par ce projet</a>
 <% end %>
+
+<% if can? :edit, @project %>
+  <%= link_to "Editez", edit_event_project_path(@event, @project)%>
+<% end %>
   

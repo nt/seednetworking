@@ -25,13 +25,20 @@
     <tr>
       <td><%= f.label :password %></td>
       <td><%= f.password_field :password %></td>
-      <td></td>
+      <td><% if @user.persisted? %>Laissez ce champ vide si vous ne souhaitez pas changer de mot de passe<%end%></td>
     </tr>
     <tr>
       <td><%= f.label :password_confirmation %></td>
       <td><%= f.password_field :password_confirmation %></td>
       <td></td>
     </tr>
+    <% if @user.persisted? %>
+    <tr>
+      <td><%= f.label :current_password %></td>
+      <td><%= f.password_field :current_password %></td>
+      <td></td>
+    </tr>
+    <% end %>
     <tr>
       <td></td>
       <td><%= f.submit "Sign up" %></td>

@@ -6,10 +6,17 @@ class Ability
     #
     user ||= User.new # guest user (not logged in)
 
-    can [:signup_project, :signup_self], Event do |e|
-      !user.participating?(e)
+    can :signup_project, Event do |e|
+      !user.participating?(e) and e.accepts_new_projects
     end
+    
+    can :signup_self, Event do |e|
+      !user.participating?(e) and e.accepts_new_participants
+    end
+    
     can :read, :all
+    
+    can [:update, :edit], Project, user_id: user.id
     
     can :vote, Project do |p|
       user.participating_as_competence_holder?(p.event) and !user.voted_for?(p)

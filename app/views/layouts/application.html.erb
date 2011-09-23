@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Seednetworking</title>
-  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
@@ -17,6 +16,7 @@
   <div class="row">
   <div class="span4 columns offset12">
   <% if user_signed_in? %>
+  Enregistré en tant que: <%= link_to(current_user.first_name, edit_user_registration_path) %>
     <li>
     <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
     </li>
