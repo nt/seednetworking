@@ -7,7 +7,7 @@ class Ability
     user ||= User.new # guest user (not logged in)
 
     can [:signup_project, :signup_self], Event do |e|
-      user.participating? e
+      !user.participating?(e)
     end
     can :read, :all
     
