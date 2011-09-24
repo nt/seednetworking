@@ -4,7 +4,11 @@ class AddInvitationStatusFlagsToEvents < ActiveRecord::Migration
       t.boolean :accepts_new_projects, default: true
       t.boolean :accepts_new_participants, default: true
     end
-    Event.update_all ["accepts_new_projects = ? and accepts_new_participations = ?", true, true]
+    Event.all.each do |e|
+      e.accepts_new_projects = true
+      e.accepts_new_participants = true
+      e.save
+    end
   end
 
   def self.down
