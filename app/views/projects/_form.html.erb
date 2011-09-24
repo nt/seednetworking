@@ -13,34 +13,31 @@
 
 <table>
   <tr>
-    <td width="100px" vertical-align="top"><%= f.label :name, "Nom du projet" %></td>
+    <td width="100px" vertical-align="top"><%= f.label :name, t("seednetworking.new_project.name") %></td>
     <td><%= f.text_field :name %></td>
     <td></td>
   </tr>
   <tr>
-    <td><%= f.label :description %></td>
+    <td><%= f.label :description, t("seednetworking.new_project.description") %></td>
     <td><%= f.text_area :description, size: "30x15" , style:"width:400px"%></td>
     <td>
-      <p>
-        Décrivez votre projet de manière synthétique, en détaillant clairement:<br/> votre idée, les profils clés de l'équipe, l'état d'avancement du projet, ce que vous attendez du profil que vous recherchez, et ce que vous êtes prêt à lui proposer.
-      </p>
     </td>
   </tr>
   <tr>
-    <td width="100px" vertical-align="top"><%= f.label :website, "Site" %></td>
+    <td width="100px" vertical-align="top"><%= f.label :website, t("seednetworking.new_project.site") %></td>
     <td><%= f.url_field :website %></td>
     <td></td>
   </tr>
   <tr>
-    <td width="100px" vertical-align="top">Je cherche</td>
+    <td width="100px" vertical-align="top"><%=t("seednetworking.new_project.seeking")%></td>
     <td>
       <% Project::SEEKING_OPTIONS.each do |k,v| %>
-        <%= f.label(("seeking_"+k).to_sym, v)%><%= f.radio_button(:seeking, k)%><br/>
+        <%= f.label(("seeking_"+k).to_sym, t("seednetworking.project.seeking_options."+k))%><%= f.radio_button(:seeking, k)%><br/>
       <% end %>
-      <%= label_tag "seeking_other", "Autre" %>
+      <%= label_tag "seeking_other", t("seednetworking.project.seeking_options.other") %>
       <%= text_field_tag :seeking_other %>
     </td>
-    <td>.. un associé ou un stagiaire ?</td>
+    <td></td>
   </tr>
   <tr><td></td>
     <td><%= f.submit %></td><td></td>

@@ -1,9 +1,9 @@
-<h2>Inscrivez vous !</h2>
-<h3>Il faut être inscrit pour participer au seednetworking</h3>
+<h2><%=t "seednetworking.new_session.signup"%></h2>
+<strong><%= t("seednetworking.new_session.info").gsub(/\n/,"<br/>").html_safe %></strong>
 
 <%= render 'devise/registrations/form' %>
 
-<h2>Déja Inscrit ?</h2>
+<h2><%=t "seednetworking.new_session.signin"%></h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <table>

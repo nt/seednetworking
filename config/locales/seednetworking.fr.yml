@@ -1,0 +1,111 @@
+fr:
+  seednetworking:
+    event:
+      signup_project: Soumettez votre projet ICI
+      signup_project_tagline: Devenez visible auprès de vos futurs associés et collaborateurs
+      signup_self: Vous cherchez un projet ?
+      signup_self_tagline: Créez votre profil ICI, puis VOTEZ pour les projets que vous voulez rencontrer
+    
+    new_session:
+      signup: Inscrivez vous !
+      signin: Déjà inscrit ?
+      info: |
+        ETAPE 1 : Créez votre Profil Personnel SEEDNET ou connectez vous avec votre profil existant, avant de compléter votre inscription à l’événement.
+        Tous les champs sont obligatoires
+    
+    
+    participation:
+      seeking_options:
+        be_partner: Une association
+        fulltime_job: Un emploi à temps plein
+        internship: Un job à temps plein
+        contract_job: Un contrat de prestation
+        other: Autre
+      after_signup: |
+        ETAPE 3 : Votez maintenant pour les projets QUE VOUS SOUHAITERIEZ RENCONTRER lors du prochain événement.
+        Vous pouvez sélectionner jusqu’à 10 projets.
+        Vos choix seront comptabilisés pour déterminer les projets lors de l’événement, de manière à optimiser les rencontres.
+        Nous vous invitons à revenir régulièrement consulter la liste de projets.
+        
+    new_participation:
+      title: Participez au seednetworking en porteur de compétence
+      description: Description
+      seeking: Je recherche
+      info: |
+        ETAPE 2 : Donnez un maximum d'informations sur votre domaine d’expertise, vos références et les compétences originales que vous pouvez apporter à un projet. Détaillez le poste ou l’opportunité que vous recherchez, et les conditions que vous êtes prêts à accepter.
+        
+        IMPORTANT : Les profils de porteurs de compétences seront revus avec attention, et éventuellement écartés, afin d’éviter les votes sauvages.
+        
+        NOTE : Les profils ne seront pas communiqués de manière publique.
+        
+        Puis :
+        1. Nous vous demandons de prendre le temps de SELECTIONNER LES PROJETS QUE VOUS SOUHAITERIEZ RENCONTRER durant l’événement en votant pour eux.
+        La qualité des rencontres que vous ferez dépendra de votre travail de présélection.
+        2. Vous pouvez sélectionner jusqu’à 10 projets.
+        Il vous est possible de désélectionner des projets au profit d’autres projets jusqu’à 7 jours en amont de l’événement.
+        Des emails vous seront envoyés une fois par semaine pour vous inviter à voter pour les nouveaux projets inscrits.
+        3. 7 jours avant l’événement, les 30 projets ayant reçus le plus de votes seront avertis de leur sélection et auront 2 jours pour confirmer leur présence. Nous enverrons aux projets sélectionnés la liste des profils ayant voté pour eux.
+        Note : vous ne rencontrerez donc pas forcément l’ensemble des projets sélectionnés.
+        4. Nous vous demanderons également de confirmer votre présence en vous envoyons la liste des projets sélectionnés que vous souhaitiez rencontrer.
+        
+        A vous de jouer !
+    
+    project:
+      seeking_options:
+        partner: Un associé
+        fulltime_worker: Un employé plein temps
+        intern: Un stagiaire
+        service_provider: Un prestataire
+        other: Autre
+      after_signup: |
+        ETAPE 3 : Votre projet va maintenant être sélectionné par les porteurs de compétence.
+        Nous vous tiendrons informés de votre sélection d’ici le …/…/…..(7 jours avant l’événement). Et vous aurez 2 jours pour nous confirmer votre participation.
+        Pour l’instant votre projet a recueillis X vote(s) et se positionne en Xème position.»
+    
+    new_project:
+      name: Nom du projet
+      description: Description
+      site: Site internet
+      title: Inscrivez votre projet !
+      seeking: Je recherche
+      info: |
+        ETAPE 2 : Donnez un maximum d'informations sur votre projet, son avancement et son ambition, ci-dessous. Détaillez avec soin les compétences que vous recherchez et ce que vous êtes prêt à offrir.
+        Comme expliqué ci-dessous, ce sont les porteurs de compétences qui vous sélectionneront pour participer à SeedNetworking. Nous ne pouvons que vous inciter à privilégier la clarté, la transparence et la concision dans vos explications.
+        
+        Processus de sélection :
+        1. Les porteurs de projet peuvent soumettre leurs projets jusqu'à 7 jours en amont de l'événement.
+        2. Les porteurs de compétence peuvent voter dès la publication de l’événement sur le site jusqu'à la veille de l'événement.
+        Note: seuls les porteurs de compétences inscrits peuvent voter.
+        Seednetworking se réserve le droit de ne pas prendre en compte les votes des inscrits, dès lors qu’ils n’apparaissent pas correspondre à une réelle motivation de participation. Le sérieux des inscriptions des votants sera donc attentivement suivi par l’équipe.
+        3. Les 30 projets ayant le plus de votes sont alertés par mail 7 jours avant l'événement de leur sélection, et doivent confirmer leur présence sous 2 jours, afin de pouvoir laisser leur place à d'autres projet en cas d'indisponibilité.
+        Seednetworking ajustera éventuellement le nombre de projets au nombre de porteurs de compétence inscrits.
+        4. Les projets pourront être resoumis lors des prochains événements. Les projets inscrits ne s’étant présentés lors de l’événement ne seront pas réinvités.
+        
+        A vous de jouer !
+    
+    how_does_it_work:
+      title: Comment ça marche
+      explanation: |
+        Depuis 3 ans déjà, Seednetworking est synonyme de speed dating efficace entre compétences IT et projets web.
+        Notre expérience nous confirme que l'association réussie de compétences et de personnalités est, plus que le projet lui-même, le moteur des start up qui perceront, en plus d'apporter une légitimité précieuse dans un contexte d'investissements ralentis.
+        L’équipe a donc décidé de faire grandir sa formule pour accompagner ce besoin prononcé: plus de ciblage, plus de poids accordé aux compétences IT, plus régulièrement.
+        
+        La démarche est désormais la suivante :
+        
+          1. Les porteurs de projet peuvent soumettre leurs projets, pendant le cycle de sélection, jusqu'à 7 jours en amont de l'événement.
+          
+          2. Les porteurs de compétence peuvent voter pour les PROJETS QU’ILS SOUHAITERAIENT RENCONTRER, dès la publication de l’événement sur le site et jusqu'à la veille de l'événement.
+        Note 1: seuls les porteurs de compétences inscrits peuvent voter. Seednetworking se réserve le droit de ne pas prendre en compte les votes des inscrits, dès lors qu’ils n’apparaissent pas correspondre à une réelle motivation de participation. Le sérieux des inscriptions des votants sera donc attentivement suivi par l’équipe.
+        Note 2: Les porteurs de compétences peuvent sélectionner jusqu’à 10 projets.
+        
+        Les choix de projets peuvent être modifiés jusqu’à 7 jours avant l’évènement.
+        
+        3. Les 30 projets ayant le plus de votes sont alertés par mail 7 jours avant l'événement de leur sélection, et doivent confirmer leur présence sous 2 jours, afin de pouvoir laisser leur place à d'autres projet en cas d'indisponibilité.
+        Seednetworking ajustera éventuellement le nombre de projets au nombre de porteurs de compétence inscrits.
+        Nous enverrons aux projets sélectionnés la liste des profils ayant voté pour eux.
+        
+        4. Les projets pourront être resoumis lors des prochains événements. Les projets inscrits ne s’étant présentés lors de l’événement ne seront pas réinvités.
+        
+        N’hésitez pas à nous faire des retours sur cette démarche.
+        
+        En espérant faire de notre mieux pour favoriser la naissance de projets Web d’ambition, en France.

@@ -30,7 +30,7 @@ class ParticipationsController < ApplicationController
     @participation.user = current_user
     respond_to do |format|
       if @participation.save
-        format.html { redirect_to(@event, :notice => 'Votre participation a bien ete enregistree') }
+        format.html { redirect_to(@event, :notice => 'Votre participation a bien ete enregistree, n\'oubliez pas de voter pour vos projets favoris') }
         format.xml  { render :xml => @participation, :status => :created, :location => @participation }
       else
         format.html { render :action => "new" }

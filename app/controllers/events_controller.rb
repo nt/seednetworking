@@ -12,5 +12,8 @@ class EventsController < ApplicationController
     @event = Event.last
     redirect_to @event
   end
+  
+  def explanation
+  end
 
 end

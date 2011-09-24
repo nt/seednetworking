@@ -15,23 +15,18 @@
     <tr>
       <td><%= f.label :description %></td>
       <td><%= f.text_area :description, size: "30x15" , style:"width:400px"%></td>
-      <td>
-        <p>
-          Décrivez votre profil de manière synthétique, en détaillant clairement : votre expérience, vos compétences, ce que vous faites actuellement, le projet que vous recherchez et le rôle que vous voulez y prendre.<br/>
-          N'oubliez pas de préciser vos atouts pour faire avancer le projet.
-        </p>
-      </td>
+      <td></td>
     </tr>
     <tr>
       <td width="100px" vertical-align="top">Je cherche</td>
       <td>
         <% Participation::SEEKING_OPTIONS.each do |k,v| %>
-          <%= f.label(("seeking_"+k).to_sym, v)%><%= f.radio_button(:seeking, k)%><br/>
+          <%= f.label(("seeking_"+k).to_sym, t("seednetworking.participation.seeking_options."+k))%><%= f.radio_button(:seeking, k)%><br/>
         <% end %>
-        <%= label_tag "seeking_other", "Autre" %>
+        <%= label_tag "seeking_other", t("seednetworking.participation.seeking_options.other") %>
         <%= text_field_tag :seeking_other %>
       </td>
-      <td>.. une association, un job, autre ?</td>
+      <td></td>
     </tr>
     <tr><td></td>
       <td><%= f.submit %></td><td></td>

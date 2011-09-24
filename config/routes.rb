@@ -7,6 +7,8 @@ Seednetworking::Application.routes.draw do
     resources :participations
   end
 
+  match 'explanation' => "events#explanation"
+
   devise_for :users
   
   root to: "events#latest"

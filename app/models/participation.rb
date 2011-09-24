@@ -17,7 +17,7 @@ class Participation < ActiveRecord::Base
   
   def seeking
     s = read_attribute(:seeking)
-    SEEKING_OPTIONS.has_key?(s) ? SEEKING_OPTIONS[s] : s
+    SEEKING_OPTIONS.has_key?(s) ? I18n.t("seednetworking.participation.seeking_options."+s) : s
   end
   
 end
